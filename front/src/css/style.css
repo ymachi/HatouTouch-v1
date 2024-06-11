@@ -1,0 +1,242 @@
+* {
+	box-sizing: border-box; /* On spécifie que la largeur (width) de chaque boîte comprend le padding et la bordure (par défaut, c'est seulement la largeur du contenu) */
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%; /* 1rem = 10px (la formule est 10/16*100) la taille par défaut étant 16px */
+}
+
+
+
+@font-face {
+    font-family: 'Sedan';
+    src: url('src/assets/fonts/SedanSC-Regular.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face
+{
+ 
+font-family: "IcoFont";
+font-weight: normal;
+font-style: "Regular";
+src: url("../../fonts/icofont.woff2") format("woff2"),
+url("./fonts/icofont.woff") format("woff");
+}
+
+body{
+   font-size: 1.6rem; /* on remets la taille du texte par défaut pour le body à 16px en utilisant les rem comme unité) */
+   font-family: "Sedan";
+   color: #2c0a11;
+   font-weight: bold;
+}
+
+
+
+/*********************** NAV BAR *********************/
+
+.logo{
+    height: 6rem;
+}
+
+.slogan{
+   border-bottom: 2px solid white;
+   font-family: 'Brush Script MT', cursive;
+}
+
+header{
+    text-align: center;
+    background-color: #facfd5;
+    width: 100%;
+    
+}
+.viewer{
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #facfd5 ;
+  
+    
+}
+
+.viewer .link{
+    padding: 1rem;
+    text-decoration: none;
+    color: #2c0a11;
+    transition: all 1s;
+}
+
+.viewer .link:hover{
+    background-color: #2c0a11;
+    color: white;
+    
+}
+
+
+/******************************************************************************/
+
+
+/*********************** CONTENUE *********************/
+
+
+
+
+
+/*********************** IMAGES *********************/
+
+.img-responsive {
+   width: 100%;
+}
+
+/*********************************************************************************/
+
+.icofont-arrow-up{
+   font-size: 3rem;
+   text-decoration: none;
+   border-radius: 8px;
+   color: #2c0a11;
+}
+
+.scrolltop{
+   border: none;
+   background-color: transparent;
+   color: #2f1e0e;
+   font-size: 5rem;
+   transition: all 1s ease-out;
+}
+
+.scrolltop:hover{
+   color: #facfd5
+}
+
+/************************************ FOOTER  **********************************/
+
+.footer{
+   background-color: #2c0a11;
+   text-align: center;
+   color: white;
+   width: 100%;
+   margin-top: 2rem;
+   padding-top: 2rem;
+   padding-bottom: 3rem;
+}
+
+.footer h3{
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+}
+
+
+/*********************************************************************************/
+
+
+/* *****************************************************************
+PAYMENT
+***************************************************************** */
+
+.paiements p{
+	display: inline-block;
+	padding: 2rem;
+	width: 10rem;
+	height: 6rem;
+	background-image: url('../public/img/payment.png');
+	background-size: 500%;
+	border-radius: 4px;
+
+}
+.payment_cb {
+	background-position: -0% 0; 
+}
+.payment_visa {
+	background-position: -100% 0;
+}
+.payment_mastercard {
+	background-position: -300% 0;
+}
+.payment_virement {
+	background-position: -400% 0;
+}
+
+
+
+/*********** SOCIALS ********/
+
+.icofont-instagram,
+.icofont-snapchat,
+.icofont-tiktok{
+  font-size: 4rem;
+  text-decoration: none;
+  color: white;
+  padding: 2rem 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*************************** MÉDIAS QUERIES******************************/
+
+/************* TABLETTE  *************/
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+   
+   /**** NAVBAR *****/
+   .viewer{
+     flex-direction: row;
+  }
+   
+   .viewer .link{
+      padding: 1rem 2rem;
+   }
+    /******************/
+    /**** FOOTER *****/
+    
+    .footer{
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        grid-gap: 1rem; 
+        justify-items: center;
+    }
+    .container {
+        padding: 0 1.5rem; 
+   }
+}
+
+/************* DESKTOP *************/
+
+@media screen and (min-width: 1200px){
+    /**** NAVBAR *****/
+    .viewer{
+     flex-direction: row;
+  }
+  
+  .viewer .link{
+      padding: 1rem 2rem;
+   }
+     /******************/
+    /**** FOOTER *****/
+    
+    .footer{
+       display: flex;
+       justify-content: space-evenly;
+       align-items: flex-start;
+       
+    }
+    .container {
+        padding: 0 1.5rem; 
+    }
+    
+}

@@ -1,0 +1,208 @@
+
+/*********************** NAV BAR *********************/
+
+
+.logo{
+    height: 6rem;
+}
+
+.slogan{
+   border-bottom: 2px solid white;
+   font-family: 'Brush Script MT', cursive;
+}
+
+
+.sidebar{
+   height: 100%;
+   width: 20rem;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color:  #facfd5;
+   padding-top: 2rem;
+}
+
+.viewer-admin{
+   display: flex;
+   flex-direction: column;
+}
+
+.viewer-admin .link-admin{
+   padding: 1rem;
+    text-decoration: none;
+    color: black;
+    transition: all 1s;
+}
+
+.viewer-admin .link-admin:hover{
+    background-color: #2c0a11;
+    color: white;
+}
+
+.icofont-duotone icofont-reply{
+  font-size: 4rem;
+  text-decoration: none;
+  color: white;
+  padding: 2rem 2rem;
+}
+.content {
+  margin: auto;
+   padding: 1rem;
+}
+     
+      
+/****************  TITRE *********************/
+h1{
+   padding-top: 2rem;
+   text-align: center;
+    color: #2F1E0E;
+}
+h2{
+   text-align: center;
+}
+/***********************************************************************/
+.img-responsive{
+    width: 100%;
+}
+
+
+/************************* TABLEAU **************************/
+table{
+    border : 2px solid #facfd5;
+    width: 100%;
+    
+}
+
+th,
+td{
+ border : 2px solid #facfd5;
+ padding: 1em;
+}
+
+tr:nth-child(odd) td {
+    background-color: #fcf5f6;
+}
+
+.clients,
+.avis,
+.devis,
+.boxs{
+   margin: auto;
+}
+/**********************************************************************/
+
+
+button{
+    padding: 1rem;
+}
+.button-action{
+   border: none;
+   background-color: transparent;
+   color: red;
+   text-decoration: none;
+   
+}
+
+.button-action:hover{
+   text-decoration: underline;
+}
+
+.button-action .nav-action{
+   text-decoration: none;
+   color: #2c0a11;
+}
+
+.add-dashboard{
+   text-align: center;
+   background-color: #facfd5;
+   border-radius: 7px;
+   padding: 2rem;
+   margin: auto;
+   margin-bottom: 2rem;
+  
+}
+
+
+
+.add-dashboard input, input[type="file"]{
+   width: 100%;
+   border: 1px solid #facfd5 ;
+	border-radius: 5px;
+	padding: 2rem;
+	margin-bottom: 2rem;
+}
+
+.add-dashboard input[type="submit"]{
+   transition: all 1s;
+   width: 50%;
+	margin: 3rem auto 0 auto;
+	background-color: #2c0a11;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.6rem;
+	letter-spacing: .3rem;
+	padding: 1rem 3rem;
+}
+
+.add-dashboard input[type="submit"]:hover{
+   background-color: white;
+   color: #2c0a11;
+   border: 2px solid #2c0a11;
+}
+
+/*************************** MÉDIAS QUERIES******************************/
+
+/************* TABLETTE  *************/
+@media screen and (min-width: 768px) {
+    .sidebar {
+        width: 150px;
+    }
+
+    .content {
+        margin-left: 15rem;
+    }
+    
+     th,
+     td{
+        padding: 0.5em;
+        font-size: 0.8em;
+     }
+     
+     .clients,
+     .avis,
+     .devis,
+     .boxs{
+       margin: auto;
+     }
+    .img-responsive-dashboard {
+     max-width: 20rem; 
+  }
+}
+
+
+/************* MOBILE  *************/
+@media screen and (max-width: 780px) {
+    .sidebar{
+        width: 100%;
+        position: static;
+    }
+
+    .content{
+        margin-left: 0;
+    }
+    
+    .users,
+    .avis,
+    .orders{
+       overflow-x: auto;
+       table-layout: auto;
+    }
+    
+    th,
+    td {
+        padding: 0.5em;
+        font-size: 0.8em;
+
+     }
+}
